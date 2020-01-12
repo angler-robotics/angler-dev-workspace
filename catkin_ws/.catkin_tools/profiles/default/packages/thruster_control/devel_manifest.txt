@@ -1,0 +1,6 @@
+thruster_control
+/home/wesley/catkin_ws/devel/.private/thruster_control/cmake.lock /home/wesley/catkin_ws/devel/./cmake.lock
+/home/wesley/catkin_ws/devel/.private/thruster_control/lib/pkgconfig/thruster_control.pc /home/wesley/catkin_ws/devel/lib/pkgconfig/thruster_control.pc
+/home/wesley/catkin_ws/devel/.private/thruster_control/lib/python2.7/dist-packages/thruster_control/__init__.py /home/wesley/catkin_ws/devel/lib/python2.7/dist-packages/thruster_control/__init__.py
+/home/wesley/catkin_ws/devel/.private/thruster_control/share/thruster_control/cmake/thruster_controlConfig-version.cmake /home/wesley/catkin_ws/devel/share/thruster_control/cmake/thruster_controlConfig-version.cmake
+/home/wesley/catkin_ws/devel/.private/thruster_control/share/thruster_control/cmake/thruster_controlConfig.cmake /home/wesley/catkin_ws/devel/share/thruster_control/cmake/thruster_controlConfig.cmake

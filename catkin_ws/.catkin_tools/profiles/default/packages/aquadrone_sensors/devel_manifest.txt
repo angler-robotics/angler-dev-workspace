@@ -1,0 +1,5 @@
+aquadrone_sensors
+/home/wesley/catkin_ws/devel/.private/aquadrone_sensors/cmake.lock /home/wesley/catkin_ws/devel/./cmake.lock
+/home/wesley/catkin_ws/devel/.private/aquadrone_sensors/lib/pkgconfig/aquadrone_sensors.pc /home/wesley/catkin_ws/devel/lib/pkgconfig/aquadrone_sensors.pc
+/home/wesley/catkin_ws/devel/.private/aquadrone_sensors/share/aquadrone_sensors/cmake/aquadrone_sensorsConfig.cmake /home/wesley/catkin_ws/devel/share/aquadrone_sensors/cmake/aquadrone_sensorsConfig.cmake
+/home/wesley/catkin_ws/devel/.private/aquadrone_sensors/share/aquadrone_sensors/cmake/aquadrone_sensorsConfig-version.cmake /home/wesley/catkin_ws/devel/share/aquadrone_sensors/cmake/aquadrone_sensorsConfig-version.cmake

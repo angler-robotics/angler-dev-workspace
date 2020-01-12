@@ -1,0 +1,5 @@
+aquadrone_description
+/home/wesley/catkin_ws/devel/.private/aquadrone_description/cmake.lock /home/wesley/catkin_ws/devel/./cmake.lock
+/home/wesley/catkin_ws/devel/.private/aquadrone_description/lib/pkgconfig/aquadrone_description.pc /home/wesley/catkin_ws/devel/lib/pkgconfig/aquadrone_description.pc
+/home/wesley/catkin_ws/devel/.private/aquadrone_description/share/aquadrone_description/cmake/aquadrone_descriptionConfig.cmake /home/wesley/catkin_ws/devel/share/aquadrone_description/cmake/aquadrone_descriptionConfig.cmake
+/home/wesley/catkin_ws/devel/.private/aquadrone_description/share/aquadrone_description/cmake/aquadrone_descriptionConfig-version.cmake /home/wesley/catkin_ws/devel/share/aquadrone_description/cmake/aquadrone_descriptionConfig-version.cmake
