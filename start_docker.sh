@@ -61,6 +61,6 @@ if ! docker container ps | grep -q ${CONTAINER_NAME}; then
 	$IMAGE_NAME 
 else
 	echo "Starting shell in running container"
-	docker exec -it --workdir /home/${USER} --user $(whoami) ${CONTAINER_NAME} bash -l -c "stty cols $(tput cols); stty rows $(tput lines); bash"
+	docker exec -it --workdir /home/${USER} --env USER=${USER} --user $(whoami) ${CONTAINER_NAME} bash -l -c "stty cols $(tput cols); stty rows $(tput lines); bash"
 fi
 

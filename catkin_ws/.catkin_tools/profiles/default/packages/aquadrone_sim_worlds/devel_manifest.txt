@@ -1,5 +1,0 @@
-aquadrone_sim_worlds
-/home/wesley/catkin_ws/devel/.private/aquadrone_sim_worlds/cmake.lock /home/wesley/catkin_ws/devel/./cmake.lock
-/home/wesley/catkin_ws/devel/.private/aquadrone_sim_worlds/lib/pkgconfig/aquadrone_sim_worlds.pc /home/wesley/catkin_ws/devel/lib/pkgconfig/aquadrone_sim_worlds.pc
-/home/wesley/catkin_ws/devel/.private/aquadrone_sim_worlds/share/aquadrone_sim_worlds/cmake/aquadrone_sim_worldsConfig.cmake /home/wesley/catkin_ws/devel/share/aquadrone_sim_worlds/cmake/aquadrone_sim_worldsConfig.cmake
-/home/wesley/catkin_ws/devel/.private/aquadrone_sim_worlds/share/aquadrone_sim_worlds/cmake/aquadrone_sim_worldsConfig-version.cmake /home/wesley/catkin_ws/devel/share/aquadrone_sim_worlds/cmake/aquadrone_sim_worldsConfig-version.cmake
