@@ -24,7 +24,7 @@ Non-Default Installation Settings:
 - password: aquadrone
 - Log in automatically
 
-Adjust screen size if needed, and install all software updates
+Run software updater and update everything. Adjust screen size if needed, and add the terminal to favourites.
 
 # Run these commands in a terminal:
 
