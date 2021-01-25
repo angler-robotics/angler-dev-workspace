@@ -18,6 +18,8 @@ On First Startup:
 Select Ubuntu iso file if prompted
 
 Non-Default Installation Settings:
+- name: Aquadrone
+- computer name: aquadrone-vm
 - username: aquadrone
 - password: aquadrone
 - Log in automatically
