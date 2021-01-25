@@ -74,7 +74,7 @@ catkin init
 catkin clean -y  
 catkin build  
 
-source ~/Documents/aquadrone2020_dev_workspace/catkin_ws/devel/setup.bash  
+source ~/aquadrone2020_dev_workspace/catkin_ws/devel/setup.bash  
 
 ## .bashrc setup
 echo "" >> ~/.bashrc  
