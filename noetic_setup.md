@@ -62,7 +62,9 @@ git clone https://github.com/Waterloo-Aquadrone/aquadrone2020.git
 git clone https://github.com/tdenewiler/uuv_simulator.git  
 cd uuv_simulator  
 git checkout --track origin/rosdep-python3  
+cd ../../  
 rosdep install --from-paths src --ignore-src --rosdistro=noetic -y --skip-keys "gazebo gazebo_msgs gazebo_plugins gazebo_ros gazebo_ros_control gazebo_ros_pkgs"  
+cd src/uuv_simulator  
 git checkout --track origin/noetic-devel  
 cd ../../  
 
