@@ -24,9 +24,13 @@ Non-Default Installation Settings:
 - password: aquadrone
 - Log in automatically
 
+Adjust screen size if needed, and install all software updates
+
 # Run these commands in a terminal:
 
-sudo apt install git python3-pip
+sudo apt update  
+sudo apt upgrade -y  
+sudo apt install git python3-pip  
 
 ## Ros setup from http://wiki.ros.org/Installation/Ubuntu
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'  
