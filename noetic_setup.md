@@ -58,6 +58,9 @@ cd ~
 git clone https://github.com/Waterloo-Aquadrone/aquadrone2020_dev_workspace.git  
 cd aquadrone2020_dev_workspace/catkin_ws/src  
 git clone https://github.com/Waterloo-Aquadrone/aquadrone2020.git  
+cd aquadrone2020  
+git checkout --track origin/amaar/python3-switch  
+cd ../
 
 git clone https://github.com/tdenewiler/uuv_simulator.git  
 cd uuv_simulator  
