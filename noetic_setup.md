@@ -11,7 +11,8 @@ Change the Following Settings:
 - 8 CPUs
 - 100% utilization
 - 128 MB Video Memory
-- Enable 3D acceleration
+- VBoxVGA Graphics Controller
+- Disable 3D acceleration
 - Storage -> Controller -> Optical Drive -> Pick Ubuntu ISO file (delete the empty one afterwards)
 
 On First Startup:
@@ -88,3 +89,7 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 echo "source ~/aquadrone2020_dev_workspace/catkin_ws/devel/setup.bash" >> ~/.bashrc  
 echo "cd ~/aquadrone2020_dev_workspace/catkin_ws/src/aquadrone2020" >> ~/.bashrc  
 echo "" >> ~/.bashrc  
+
+# Debugging Issues
+- If everything installs correctly and the code seems to be running but Gazebo is just showing a black screen, then try changing the graphics controller in VirtualBox's settings. For me it only worked with the VBoxVGA controller.
+- Ongoing issue: when launching Gazebo, the following error appears ```ERROR: cannot launch node of type [message_to_tf/message_to_tf]: message_to_tf```
