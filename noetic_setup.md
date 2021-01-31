@@ -90,6 +90,9 @@ echo "source ~/aquadrone2020_dev_workspace/catkin_ws/devel/setup.bash" >> ~/.bas
 echo "cd ~/aquadrone2020_dev_workspace/catkin_ws/src/aquadrone2020" >> ~/.bashrc  
 echo "" >> ~/.bashrc  
 
+## Final Cleanup
+sudo apt autoremove
+
 # Debugging Issues
 - If everything installs correctly and the code seems to be running but Gazebo is just showing a black screen, then try changing the graphics controller in VirtualBox's settings. For me it only worked with the VBoxVGA controller.
 - Ongoing issue: when launching Gazebo, the following error appears ```ERROR: cannot launch node of type [message_to_tf/message_to_tf]: message_to_tf```
