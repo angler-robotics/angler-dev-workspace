@@ -1,0 +1,53 @@
+FROM ros:noetic-robot
+
+# Install basic useful programs
+# Some are just for testing that the docker image was built correctly
+RUN apt-get update ; exit 0
+RUN apt-get install apt-transport-https
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      curl \
+      build-essential \
+      cmake \
+      software-properties-common \
+      psmisc \
+      vim \
+      gedit \
+      sudo \
+      python3-pip \
+      git-all \
+      x11-apps \
+      mesa-utils \
+      && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install Required ROS Packages and Tools
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      python3-catkin-tools \
+      python3-rosdep \
+      python3-rosinstall \
+      python3-rosinstall-generator \
+      python3-wstool \
+      python3-catkin-tools  \
+      python3-osrf-pycommon \
+      ros-noetic-gazebo-msgs \
+      ros-noetic-gazebo-plugins \
+      ros-noetic-gazebo-ros \
+      ros-noetic-gazebo-ros-pkgs \
+      ros-noetic-gazebo-ros-control \
+      ros-noetic-rviz \
+      && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install other requirements
+ADD pip_requirements.txt pip_requirements.txt
+RUN apt-get update && \
+    python3 -m pip install -r pip_requirements.txt && \
+    rm -rf /var/lib/apt/lists/*
+    
+
+# setup entrypoint
+COPY ./docker/docker_entrypoint.sh /
+ENTRYPOINT env && /docker_entrypoint.sh bash
+CMD ["bash"]
