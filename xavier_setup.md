@@ -16,8 +16,29 @@ Nvpmodel mode: 15W 6 core
 Set up boot from ssd based on [this video](https://www.youtube.com/watch?v=ZK5FYhoJqIg)  
 You can delete the rootOnNVMe folder on the SSD after restarting. The files on the SD card are still availible under /media/aquadrone and should be left alone.
 
+Commands copied here for conveniance:
+```
+git clone https://github.com/jetsonhacks/rootOnNVMe.git
+cd rootOnNVMe
+./copy-rootfs-ssd.sh
+./setup-service.sh
+```
+
 ## Setting up Python 3.8
 Install python 3.8 and set it as the default python3 based on [this](https://ubuntuhandbook.org/index.php/2020/07/python-3-8-4-released-install-ubuntu-18-04-16-04/)  
+WARNING: Make sure you read the note at the end and execute the corresponding command or you will not be able to open new terminals.
+
+Commands copied here for conveniance:
+```
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.8
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2
+sudo rm /usr/bin/python3; sudo ln -s python3.6 /usr/bin/python3
+```
+
+## Install pip
 ```sudo apt install python3-pip```
 
 ## Setting up the codebase
