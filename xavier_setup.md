@@ -52,7 +52,7 @@ git clone https://github.com/Waterloo-Aquadrone/aquadrone2020jetson.git
 cd aquadrone2020jetson/catkin_ws/src
 git clone https://github.com/Waterloo-Aquadrone/aquadrone2020.git
 cd aquadrone2020
-pip3 install -r pip_requirements.txt --upgrade
+python3.8 -m pip install -r pip_requirements.txt --upgrade
 ```
 Note that we do not need to install ```uuv_simulator``` on the xavier board.
 
