@@ -75,7 +75,7 @@ sudo apt install ros-melodic-uuv-simulator
 ```
 echo "" >> ~/.bashrc  
 echo "# Aquadrone Setup" >> ~/.bashrc  
-echo "source /usr/share/gazebo-11/setup.sh" >> ~/.bashrc  
+echo "source /usr/share/gazebo-9/setup.sh" >> ~/.bashrc  
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc  
 echo "source ~/aquadrone2020_dev_workspace/catkin_ws/devel/setup.bash" >> ~/.bashrc  
 echo "cd ~/aquadrone2020_dev_workspace/catkin_ws/src/aquadrone2020" >> ~/.bashrc  
