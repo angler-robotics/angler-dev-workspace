@@ -71,6 +71,20 @@ rosdep update
 sudo apt install ros-melodic-uuv-simulator
 ```
 
+# Installing catkin tools
+```
+wget http://packages.ros.org/ros.key -O - | sudo apt-key add -  
+sudo apt-get install python3-catkin-tools
+```
+
+## First catkin build
+```
+source /opt/ros/noetic/setup.bash  
+catkin init  
+catkin clean -y  
+catkin build  
+```
+
 ## .bashrc Setup
 ```
 echo "" >> ~/.bashrc  
