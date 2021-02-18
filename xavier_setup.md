@@ -56,6 +56,28 @@ python3.8 -m pip install -r pip_requirements.txt --upgrade
 ```
 Note that we do not need to install ```uuv_simulator``` on the xavier board.
 
-## Installing ROS
-Since we are forced to run Ubuntu 18.04, we can't use ROS Noetic. Instead, install ROS melodic and configure it to work with Python3 following [this guide](https://www.miguelalonsojr.com/blog/robotics/ros/python3/2019/08/20/ros-melodic-python-3-build.html).
-The one caveat is replace ```~/ros_catkin_ws``` with ```~/aquadrone2020jetson/catkin_ws```
+## Installing ROS and uuv_simulator
+xSince we are forced to run Ubuntu 18.04, we can't use ROS Noetic. Instead, install ROS melodic and configure it to work with Python3 following [this guide](https://www.miguelalonsojr.com/blog/robotics/ros/python3/2019/08/20/ros-melodic-python-3-build.html).
+xThe one caveat is replace ```~/ros_catkin_ws``` with ```~/aquadrone2020jetson/catkin_ws```
+Based on this: http://wiki.ros.org/melodic/Installation/Ubuntu
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+sudo apt update
+sudo apt install ros-melodic-desktop-full
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo rosdep init
+rosdep update
+sudo apt install ros-melodic-uuv-simulator
+```
+
+## .bashrc Setup
+```
+echo "" >> ~/.bashrc  
+echo "# Aquadrone Setup" >> ~/.bashrc  
+echo "source /usr/share/gazebo-11/setup.sh" >> ~/.bashrc  
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc  
+echo "source ~/aquadrone2020_dev_workspace/catkin_ws/devel/setup.bash" >> ~/.bashrc  
+echo "cd ~/aquadrone2020_dev_workspace/catkin_ws/src/aquadrone2020" >> ~/.bashrc  
+echo "" >> ~/.bashr
+```
