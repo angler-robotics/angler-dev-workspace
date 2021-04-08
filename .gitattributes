@@ -24,7 +24,7 @@
 *.Nvidia text
 *.gitignore text
 *.ps1 text
-*.gitattributes
+*.gitattributes text
 
 # Denote all files that are truly binary and should not be modified.
 *.png binary
