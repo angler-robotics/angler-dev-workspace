@@ -18,12 +18,13 @@
 *.yaml text
 *.csv text
 *.json text
-*.catkin_workspace
-*.sh
-*.Base
-*.Nvidia
-*.gitignore
-*.ps1
+*.catkin_workspace text
+*.sh text
+*.Base text
+*.Nvidia text
+*.gitignore text
+*.ps1 text
+*.gitattributes
 
 # Denote all files that are truly binary and should not be modified.
 *.png binary
