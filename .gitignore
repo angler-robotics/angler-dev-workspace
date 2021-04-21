@@ -9,6 +9,7 @@ catkin_ws/src/*
 *.pyc
 
 *.vscode
+.idea/
 
 .bash_history
 .cache
