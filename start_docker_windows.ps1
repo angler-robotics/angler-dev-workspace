@@ -31,8 +31,8 @@ else
 	echo $DIR":/home/aquadrone"
 	docker run `
 	-it --rm `
-	-e DISPLAY="$IP$DISPLAY" `
-	-v $DIR":/home/aquadrone" `
+	--env DISPLAY="$IP$DISPLAY" `
+	--volume $DIR":/home/aquadrone" `
 	--workdir /home/aquadrone `
 	--user root `
 	--name ${CONTAINER_NAME} `
