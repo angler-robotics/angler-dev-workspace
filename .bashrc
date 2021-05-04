@@ -1,3 +1,4 @@
+#!/bin/bash
 set +e
 source /opt/ros/noetic/setup.bash
 source /home/aquadrone/catkin_ws/devel/setup.bash
