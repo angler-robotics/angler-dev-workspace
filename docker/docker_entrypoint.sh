@@ -3,8 +3,16 @@
 
 # From UW Robohub
 
+env
+
 set -e
 shopt -s nullglob
+
+LOCAL_USER_NAME=aquadrone
+LOCAL_USER_ID=1000
+LOCAL_GROUP_NAME=aquadrone
+LOCAL_GROUP_ID=1000
+echo "Using USER and GROUP aquadrone, ID 1000"
 
 # check if LOCAL_USER_NAME is present, otherwise just run a shell here and now
 if [ -z "$LOCAL_USER_NAME" ]; then
@@ -58,15 +66,5 @@ do
     source $file
 done
 
-# run command as user if specified
-# su strips nearly all environment variables
-if [[ ! -z "${@}" ]]; then
-	echo $@ > /tmp/.runscript.sh
-	chmod +x /tmp/.runscript.sh
-	su -c /tmp/.runscript.sh -l $LOCAL_USER_NAME
-else
-	su -l $LOCAL_USER_NAME
-fi
-
-source /opt/ros/kinetic/setup.bash
+source /home/aquadrone/.bashrc
 exec "$@"

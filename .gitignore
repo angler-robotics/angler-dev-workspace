@@ -20,3 +20,4 @@ catkin_ws/src/*
 .ros
 .rviz
 .sdformat
+*.dbus

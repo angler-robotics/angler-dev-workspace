@@ -74,18 +74,11 @@ RUN export NV1=$(lsb_release -is | sed -e 's/\(.*\)/\L\1/') \
 
 ENV CUDA_VERSION 8.0.61
 
-ENV CUDA_PKG_VERSION 8-0=$CUDA_VERSION-1
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        cuda-nvrtc-$CUDA_PKG_VERSION \
-        cuda-nvgraph-$CUDA_PKG_VERSION \
-        cuda-cusolver-$CUDA_PKG_VERSION \
-        cuda-cublas-8-0=8.0.61.2-1 \
-        cuda-cufft-$CUDA_PKG_VERSION \
-        cuda-curand-$CUDA_PKG_VERSION \
-        cuda-cusparse-$CUDA_PKG_VERSION \
-        cuda-npp-$CUDA_PKG_VERSION \
-        cuda-cudart-$CUDA_PKG_VERSION && \
-    ln -s cuda-8.0 /usr/local/cuda && \
+COPY external/cuda/cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+RUN sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub && \
+    sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /" && \
+    sudo apt-get update && \
+    sudo apt-get -y install cuda && \
     rm -rf /var/lib/apt/lists/*
 
 # nvidia-docker 1.0 - remove after testing
