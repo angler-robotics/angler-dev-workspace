@@ -16,8 +16,8 @@ jobs:
   docker-push:
     runs-on: ubuntu-latest
     env:
-      image_name: aquadrone-dev-ws
-      image_tag: aquadrone_latest
+      image_name: aquadrone_dev_ws
+      image_tag: latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
