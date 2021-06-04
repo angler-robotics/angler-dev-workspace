@@ -5,7 +5,7 @@ name: MergeCI
 on:
   # Triggers on push (or merge) to main
   push:
-    branches: [ main ]
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
