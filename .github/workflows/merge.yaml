@@ -38,5 +38,5 @@ jobs:
       
       - name: Push Image
         run: |
-            cd docker/ubuntu
+            cd docker
             docker push ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }}
