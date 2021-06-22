@@ -37,4 +37,4 @@ jobs:
       
       - name: Init a Workspace
         run: |
-            docker run ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} cd catkin_ws && catkin_make
+            docker run ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} ls && source .bashrc && cd catkin_ws && ls &&  catkin_make
