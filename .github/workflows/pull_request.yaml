@@ -34,3 +34,7 @@ jobs:
         run: |
             cd docker
             docker build -t ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} --cache-from ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} -f Dockerfile.Base ..
+      
+      - name: Init a Workspace
+        run: |
+            docker run ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} cd catkin_ws && catkin_make
