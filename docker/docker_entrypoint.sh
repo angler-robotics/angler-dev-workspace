@@ -45,15 +45,15 @@ fi
 set -e
 
 # fix tty permissions so user can run screen
-chmod g+r /dev/pts/0
+chmod g+r /dev/pts/0   || true
 
 # fix access to /dev/video*
 for file in /dev/video*; do
-	chmod a+rwx $file
+	chmod a+rwx $file   || true
 done
 # allow graphics card access
 for file in /dev/dri/*; do
-	chmod a+rwx $file
+	chmod a+rwx $file   || true
 done
 
 # show ip address on stdout
@@ -67,4 +67,5 @@ do
 done
 
 source /home/aquadrone/.bashrc
+echo "Running Exec from entrypoint: $@"
 exec "$@"
