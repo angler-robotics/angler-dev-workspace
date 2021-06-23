@@ -1,0 +1,9 @@
+.config
+.dbus
+.gazebo
+.ignition
+.local
+.nv
+.ros
+.rviz
+.sdformat
