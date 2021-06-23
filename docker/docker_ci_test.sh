@@ -26,3 +26,5 @@ rm -rf /catkin_ws/build || true
 rm -rf /catkin_ws/devel || true
 cd /catkin_ws
 catkin build
+catkin run_tests
+catkin_test_results
