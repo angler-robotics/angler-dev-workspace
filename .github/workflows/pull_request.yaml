@@ -33,8 +33,13 @@ jobs:
       - name: Build Image
         run: |
             cd docker
-            docker build -t ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} --cache-from ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} -f Dockerfile.Base ..
+            docker build -t aquadrone_latest:latest -t ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} --cache-from ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} -f Dockerfile.Base ..
       
-      - name: Init a Workspace
+      - name: Build CI Image
         run: |
-            docker run ${{ secrets.DOCKERHUB_REPO }}/${{ env.image_name }}:${{ env.image_tag }} ls && source .bashrc && ls /opt && ls /opt/ros && ls && cd catkin_ws && ls &&  catkin_make
+            cd docker
+            docker build -t aquadrone_ci -f Dockerfile.CI ..
+
+      - name: Run CI Tests
+        run: |
+            docker run -it --entrypoint='' --volume $(pwd)/catkin_ws:/catkin_ws/ --volume $(pwd)/docker:/docker/ aquadrone_latest_ci  /docker/docker_ci_test.sh

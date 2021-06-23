@@ -3,6 +3,9 @@ SHELL := /bin/bash
 base:
 	docker build -t aquadrone_latest -t aquadrone_base -f Dockerfile.Base ..
 
+ci:
+	docker build -t aquadrone_latest_ci -f Dockerfile.CI ..
+
 nvidia:
 	echo "DISABLED; MAYBE UNUSED"
 	# docker build -t aquadrone_latest -t aquadrone_nvidia -f Dockerfile.Nvidia --build-arg BASE_IMAGE=aquadrone_base ..

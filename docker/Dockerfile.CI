@@ -1,0 +1,5 @@
+FROM aquadrone_latest:latest
+
+COPY .bashrc /
+CMD ["ls"]
+ENTRYPOINT []
