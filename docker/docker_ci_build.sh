@@ -20,9 +20,10 @@ echo "Container IPs: $(hostname --all-ip-addresses)"
 
 source /.bashrc || true
 
-echo "Running CI Tests"
+echo "Running CI Build"
+mkdir -p /catkin_ws/src
+rm -rf /catkin_ws/build || true
+rm -rf /catkin_ws/devel || true
 cd /catkin_ws
 
-catkin run_tests --summarize
-echo "RESULTS"
-catkin_test_results
+catkin build
