@@ -4,13 +4,13 @@
 
 ### Docker Engine
 
-Follow the install instructions here: `https://docs.docker.com/engine/install/ubuntu/`. You should have a docker version above 19.03 installed.
+Follow the install instructions [here](https://docs.docker.com/engine/install/ubuntu/). You should have a docker version above 19.03 installed.
 
 ### NVidia
 
 (From `https://docs.docker.com/config/containers/resource_constraints/`).
 
-Follow the instructions from this page: `https://nvidia.github.io/nvidia-container-runtime/`
+Follow the instructions from [this page](https://nvidia.github.io/nvidia-container-runtime/)
 
 Then, run:
 - `apt-get install nvidia-container-runtime`
@@ -21,7 +21,7 @@ Then, run:
 
 ### GUI Setup
 
-To be able to view things through Docker (gazebo, etc), follow the setup here: https://jack-kawell.com/2019/09/11/setting-up-ros-in-windows-through-docker/
+To be able to view things through Docker (gazebo, etc), follow the setup [here](https://jack-kawell.com/2019/09/11/setting-up-ros-in-windows-through-docker/)
 
 
 ## Both OS's
@@ -33,8 +33,7 @@ After the above, you can open a command line, navigate to the `docker` directory
 ### Running the Docker Container
 
 Open a command line (bash (Ubuntu) or Powershell (Windows)) and navigate to the repo directory. `Run the start_docker_[OS].x` script. This should start a container. You can do this in additional terminals to connect to the same container as well.
-
-
+In case you encounter 'running scripts is disabled on this system' error, for windows follow the [top answer here](https://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system)
 # Testing Commands
 
 For debugging issues in running containers, here are some commands you can use. Enter these from the command line.
